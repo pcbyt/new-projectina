@@ -4,6 +4,13 @@
   "description": "A basic TypeScript project skeleton with Eslint and Prettier",
   "main": "app.js",
   "scripts": {
+    "lint": "eslint \"src/**\"",
+    "lint:fix": "eslint --fix \"src/**\"",
+    "format:check": "prettier -c \"src/**\"",
+    "format": "prettier \"src/**\"",
+    "build": "rm -Rf dist && tsc",
+    "start": "node dist/app.js",
+    "build:start": "npm run build && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ivan Djurkov",
